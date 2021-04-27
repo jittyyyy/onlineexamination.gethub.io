@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" />	
+
+  </head>
+  <body>
+	<header>		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navigation">
+				<div class="container">					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="index.html"><h1><span>Online </span>Examination</h1></a>
+						</div>
+					</div>
+					
+					<div class="navbar-collapse collapse">							
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="index.html">Home</a></li>
+								<li role="presentation"><a href="registration.html" class="active">Registration</a></li>
+								<li role="presentation"><a href="login.html">Login</a></li>								
+								<li role="presentation"><a href="adminlogin.html">AdminLogin</a></li>
+								<li role="presentation"><a href="contact.html">Contact</a></li>						
+							</ul>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</nav>		
+	</header>
+	
+	<div id="breadcrumb">
+		<div class="container">	
+			<div class="breadcrumb">							
+				<li><a href="index.html">Home</a></li>
+				<li>Registration</li>			
+			</div>		
+		</div>	
+	</div>
+	
+	
+	
+	<section id="contact-page">
+        <div class="container">
+            <div class="center wow fadeInDown"data-wow-duration="1000ms" data-wow-delay="300ms">      
+                <h2>Registration</h2><hr>
+                <p><b>Please create an account.</b></p>
+            </div> 
+            <div class="row contact-wrap wow fadeInDown"data-wow-duration="1000ms" data-wow-delay="600ms"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div id="sendmessage"></div>
+                    <div id="errormessage"></div>
+                    <form action="./userRegistration" method="post" role="form" class="contactForm">
+                            <div class="form-group">
+									<span style="color:#6e6e6e;">First Name and Last Name</span><br>
+                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                            </div>
+							
+							<div class="form-group">
+							<span style="color:#6e6e6e;">Gender</span><br>
+                                    <input type="radio" name="gender" class="form-control1" value="male" /><span style="color:#6e6e6e;" > Male</span>
+                                    <input type="radio" name="gender" class="form-control1" value="female" /> <span style="color:#6e6e6e;" >Female</span>
+                                    <div class="validation"></div>
+                            </div>
+
+							<div class="form-group">
+								<span style="color:#6e6e6e;">Email</span><br>
+										<input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+										<div class="validation"></div>
+								</div>
+								<div class="form-group">
+								<span style="color:#6e6e6e;">Password</span><br>
+										<input type="password" name="password" class="form-control" id="password"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+										<div class="validation"></div>
+								</div>
+								<div class="form-group">
+								<span style="color:#6e6e6e;">Confirm Password</span><br>
+										<input type="password" name="confirmpassword" class="form-control" id="confirmpassword"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+										<div class="validation"></div>
+								</div>
+
+							<div class="form-group">
+								<span style="color:#6e6e6e;">Role</span><br>	
+									<select class="form-control">
+										<option selected>Choose...</option>
+										<option>Teacher</option>
+										<option>Student</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+								<span style="color:#6e6e6e;">Organization Type</span><br>	
+									<select class="form-control">
+										<option selected>Choose...</option>
+										<option>Primary/Secondary School</option>
+										<option>University</option>
+									</select>
+							</div>
+
+							<div class="form-group">
+								<span style="color:#6e6e6e;">Organization Name</span><br>
+								<input type="text" name="organization name" class="form-control" id="organization name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							</div>
+						
+                            <div class="form-group">
+							<span style="color:#6e6e6e;">Address</span><br>
+                                    <input type="text" class="form-control" name="address" id="add"  data-rule="minlen:4" data-msg="Please enter at least 2 chars" />
+                                    <div class="validation"></div>
+                            </div>
+							<div class="form-group">
+							<span style="color:#6e6e6e;">City</span><br>
+                                    <input type="text" class="form-control" name="city" id="city"  data-rule="minlen:4" data-msg="Please enter at least 2 chars" />
+                                    <div class="validation"></div>
+                            </div>
+						
+
+							
+							
+                        <div class="text-center"><button type="submit" class="btn btn-primary btn-lg" name="btn_registration" required="required">Submit</button></div>
+                    </form>                       
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+	
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="col-md-9 col-md-offset-5">
+					<div class="copyright">
+						&copy; KMITL , 2021.
+					</div>
+				</div>						
+			</div>
+			
+			<div class="pull-right">
+				<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+			</div>		
+		</div>
+	</footer>
+
+	
+
+	
+
+	<script src="js/jquery-2.1.1.min.js"></script>	
+    
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>  
+	<script src="js/wow.min.js"></script>
+    
+	<script src="js/functions.js"></script>
+    <script src="contactform/contactform.js"></script>
+    
+</body>
+</html>

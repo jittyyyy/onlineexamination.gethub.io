@@ -1,0 +1,3 @@
+registration.html -> action= ./userRegistration -> Call Dao and Insert data to DB 
+contact.html      -> action=./contact           -> Call Dao and Insert data to DB 
+papercat.html     -> action=./paperCat          -> Call Dao and Insert data to DB 
